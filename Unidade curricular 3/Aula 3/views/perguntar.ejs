@@ -1,0 +1,23 @@
+<%- include('header') %> <%- include('navbar') %>
+<div class="container">
+  <div class="card mt-3">
+    <div class="card-header">
+      <h2>Responda:</h2>
+    </div>
+    <div class="card-body">
+      <form>
+        <div class="form-floating">
+          <textarea
+            class="form-control"
+            name="pergunta"
+            placeholder="Faça a sua pergunta:"
+            style="height: 100px">
+          </textarea>
+          <label for="pergunta">Pergunta</label>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Salvar</button>
+      </form>
+    </div>
+  </div>
+</div>
+<%- include('footer') %>

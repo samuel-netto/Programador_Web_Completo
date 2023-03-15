@@ -1,0 +1,32 @@
+<%- include('partials/header') %>
+  <%- include('partials/navbar') %>
+    <div class="container mt-3">
+      <a class="btn btn-primary" href="/perguntar">
+        Clique aqui para fazer sua pergunta
+      </a>
+      <br>
+      <% perguntas.forEach(pergunta => { %>
+        <div class="card mt-3">
+          <div class="card-header">
+            <h2>
+              <%= pergunta.titulo %>
+            </h2>
+            <h6><%= pergunta.createdAt.toLocaleDateString('pt-BR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) %> </h6>
+          </div>
+          <div class="card-body">
+            <p>
+              <%= pergunta.descricao %>
+            </p>
+          </div>
+          <div class="card-footer">
+            <a class="btn btn-primary mt-3" href="/responder/<%= pergunta.id %>">
+              Responder
+            </a>
+          </div>
+        </div>
+      <% }) %>
+      
+      
+    </div>
+
+    <%- include('partials/footer') %>

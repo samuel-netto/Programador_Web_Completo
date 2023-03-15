@@ -1,0 +1,61 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    text-align: center;
+}
+    body{ background-image: url('4k Ellie 2.jpg');
+    }
+
+H1, H2{
+    margin-top: 10PX;
+    margin-bottom: 20PX;
+    text-align: center;
+}
+h1 {
+ color: rgb(202, 37, 37);}
+
+h2 {
+    color: rgb(0, 26, 255);
+}
+.titulo{
+    font-size: 20px;
+    color: blue;
+    text-shadow: #000;
+    margin-top: 15PX;
+    margin-bottom: 10PX;
+}
+#nav-bar{
+    color: black;
+    text-shadow: #000;
+    background-color: blue;
+    padding: 25px;
+}
+#nav-bar ul li {
+    display: inline;
+    text-decoration: none;
+}
+#nav-bar ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 18 px;
+    padding: 30px;
+}
+#nav-bar ul li a:hover {
+    background-color: white;
+    color: black;
+    padding: 15px
+}
+.flex-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+}
+.item {
+    width: 400px; 
+    height: 400px;
+    background-color: white;
+    margin: 10px;
+}
+.item img, p{
+    width: 350px;
+}

@@ -1,0 +1,10 @@
+header{
+    background-color: #f37520;
+}
+footer{
+    background-color: #454545;
+    color: white;
+}
+section{
+    height: calc(100vh - 278px);
+}

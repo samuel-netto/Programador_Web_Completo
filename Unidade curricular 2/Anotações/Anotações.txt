@@ -1,0 +1,1 @@
+	CDN: Content Delivery Network(Rede de distribuição de contéudo)é um grupo de servidores que permitem que os conteudos da net estejam facilmente disponiveis.

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 4</title>
+</head>
+<body>
+
+    <h1>Verifica se a pessoa é de maior</h1>
+    <label for="idade">idade:</label>
+    <input type="number" id="idade">
+    <button onclick="verificaIdade()">Verificar</button>
+    <p id="maior-idade"></p>
+
+    <script>
+        //tipo de dado PRIMITIVO: String, numerico, booleano ou lógico
+        let nome = 'Samuel';
+        let idade = 21;
+        let peso = 72.00;
+        let maior_idade = true; //Tipo de booleano
+
+        //Tipo de dado OBJETO
+        let pessoa = {
+            nome: 'Samuel', //propriedade ou atributo
+            idade: 21,
+            peso: 72.00,
+            maiorIdade: true,
+        }
+
+        //Estrutura condicional - Se (If)  simples
+        if(pessoa.idade >=18){
+            pessoa.maiorIdade = "Sim"
+        } else { //Senão
+            pessoa.maiorIdade = 'Não'
+        }
+
+
+        console.log("Nome:",pessoa.nome);
+        console.log("Idade:",pessoa.idade);
+        console.log("Peso:",pessoa.peso);
+        console.log("Maior Idade:", pessoa.maiorIdade);
+
+        function verificaIdade() {
+            let input = document.querySelector('#idade');
+            const idade = parseInt(input.value);
+            //console.log(typeof idade);//typeof - mostra o tipo de dado
+            if (idade >= 18) { 
+                document.getElementById('maior-idade').innerHTML = 
+                'Voce é de maior idade!'
+            }
+            else {
+                document.getElementById('maior-idade').innerHTML = 
+                'Voce não é de maior idade!'
+            }
+        }
+    </script>
+</body>
+</html>

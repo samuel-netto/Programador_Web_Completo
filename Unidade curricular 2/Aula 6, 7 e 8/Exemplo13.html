@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 13</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+
+    </div>
+    <script>
+        function mensagem(nome) {
+            alert(`Seja bem vindo ${nome}!`);
+        }
+        
+        function soma(a, b) {
+            return a + b;
+        }
+
+        //Arrow function
+        const mensagem2 = (nome) => alert(`Seja bem vindo ${nome}!`);
+
+        const soma2 = (a , b) => a + b;
+        
+        //Invocação (chamadas) das funções
+        mensagem2 => alert('Outra mensagem');
+
+        mensagem('Mari');
+
+        mensagem2('Samuel');
+
+        alert ('A soma de 10 + 5 é: ' + soma2(10 , 5))
+    </script>
+</body>
+
+</html>

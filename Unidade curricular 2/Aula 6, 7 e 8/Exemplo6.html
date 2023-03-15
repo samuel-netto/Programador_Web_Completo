@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 6</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Sistema de cálculo de média de aluno</h1>
+        <div class="input-group mb-3">
+            <span class="input-group-text">Nota 1:</span>
+            <input type="text" class="form-control" id="nota1">
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Nota 2:</span>
+            <input type="text" class="form-control" id="nota2">
+        </div>
+
+        <button class="btn btn-primary" onclick="calcularMedia()">Calcular</button>
+
+        <hr>
+        <h2 class="text-center">Resultado:</h2>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Media:</span>
+            <input type="text" class="form-control" id="media" readonly>
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Resultado</span>
+            <input type="text" class="form-control" id="resultado" readonly>
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Nível</span>
+            <input type="text" class="form-control" id="nivel" readonly>
+        </div>
+    </div>
+    <script>
+        function calcularMedia() {
+            const input1 = document.querySelector('#nota1');
+            const input2 = document.querySelector('#nota2');
+
+            //converte string para decimal
+            const nota1 = parseFloat(input1.value);
+            const nota2 = parseFloat(input2.value);
+
+            const media = (nota1 + nota2) / 2;
+            document.querySelector('#media').value = media;
+
+            if(media>=6 ) {
+                document.querySelector('#resultado').value = 'aprovado';
+            } else if(media < 4) {
+                document.querySelector('#resultado').value = 'reprovado';
+            } else {
+                document.querySelector('#resultado').value = 'recuperação';
+            }
+            
+            if(media >= 9 ) {
+                document.querySelector('#nivel').value = 'Ótimo';
+            } else if(media >= 8) {
+                document.querySelector('#nivel').value = 'Bom';
+            } else if(media >= 6 ) {
+                document.querySelector('#nivel').value = 'Regular';
+            } else {
+                document.querySelector('#nivel').value = 'Ruim';
+            }
+
+
+            //Ótimo - media >= 9
+            //Bom - media >= 8
+            //Regular - media >= 6
+            //Ruim - media < 6  
+        }
+
+    </script>
+</body>
+
+</html>

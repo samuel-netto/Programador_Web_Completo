@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo JavaScript</title>
+</head>
+
+<body>
+    <h1 id="numeros"></h1>
+    <p id="alunos"></p>
+
+    <script>
+        //estrutura de repetição
+
+        //1.Laço for -- loop for
+
+        for (let i = 1; i <= 100; i++) { //i++ => i = i + 1
+            if (i % 2 == 0) { //% resto da divisão inteira {
+                //i += 2; //i = i + 2;
+                document.getElementById('numeros').innerHTML = i + '<br>';
+            }
+            i++;
+        }
+
+        //laço while - loop while
+        let i = 1;
+        while (i <= 100) {
+            if (i % 2 == 0) {
+                document.getElementById('numeros').innerHTML += i + '<br>';
+            }
+            i++;
+        }
+
+        //laço do... while - loop do ...while
+        do {
+            if (i % 2 == 0) {
+                document.getElementById('numeros').innerHTML = i + '<br>';
+            }
+            i++;
+        } while (i <= 100)
+
+        //4. for of 
+        const alunos = [
+            'Samuel',
+            'Isaac',
+            'Pedro',
+            'Nicolas',
+            'Marcus',
+            'Mauro',
+            'Luanda',
+            'Emanuel'
+        ];
+          for (const aluno of alunos) {
+            document.getElementById('alunos').innerHTML = alunos + '<br>';
+          }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+<ul> lista desordenada só com pontos
+<ol> lista ordenada em numeros
+ <il>itens da lista
+<a href="nome do arquivo do link">Nome do que vai aparecer como nome do link |</a>
+<p>Parágrafos
+<img src="nome da imagem que está na mesma pasta. o tipo de imagem(png, etc)" 
+style:" with='100px'height='100px'">
+<h1>Cabeçalho: vai diminuindo periodicamente de tamanho; chega até o <h6>
+colocar alt= após uma imagem fará que apareça uma frase para o caso de não o aplicativo não achar a imagem. 
